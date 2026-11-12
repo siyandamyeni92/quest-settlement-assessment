@@ -1,0 +1,57 @@
+﻿Γ£ö TC001 happy path: 10 credits (3.0472ms)
+Γ£ö TC002 three tasks: 30 credits (0.1927ms)
+Γ£ö TC003 lower boundary inclusive (0.1356ms)
+Γ£ö TC004 upper boundary exclusive (0.124ms)
+Γ£ö TC005 timezone +02 converted to UTC (0.1548ms)
+Γ£ö TC006 duplicate input ID counted once (0.1296ms)
+Γ£û TC007 retry does not double pay (0.8081ms)
+Γ£û TC008 retry after successful payout and notification failure (0.3ms)
+Γ£ö TC009 payout failure blocks notification (0.2974ms)
+Γ£ö TC010 notification failure does not roll back payout (0.2429ms)
+Γ£ö TC011 incomplete task not eligible (0.1187ms)
+Γ£ö TC012 incorrect schedule rejected (0.2766ms)
+Γ£ö TC013 window is previous Monday to current Monday (0.2697ms)
+Γä╣ tests 13
+Γä╣ suites 0
+Γä╣ pass 11
+Γä╣ fail 2
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 151.9486
+
+Γ£û failing tests:
+
+test at tests\settlement.test.js:13:1
+Γ£û TC007 retry does not double pay (0.8081ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  10 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/SiyandaMyeni/Downloads/quest-settlement-assessment/quest-settlement/tests/settlement.test.js:13:152)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 10,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\settlement.test.js:14:1
+Γ£û TC008 retry after successful payout and notification failure (0.3ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  10 !== 0
+  
+      at TestContext.<anonymous> (file:///C:/Users/SiyandaMyeni/Downloads/quest-settlement-assessment/quest-settlement/tests/settlement.test.js:14:280)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 10,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
